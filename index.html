@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 </head>
 <body>
     <h1>Weather app</h1>
@@ -13,22 +14,27 @@
             <input type="text" placeholder="Enter city">
             <button class="button">Submit</button>
         </div>
-        <div class="info">
-            <div class="content"></div>
-            <div class="temp-info"></div>
-        </div>
-       <div class="add-info">
-        <div class="general"></div>
-        <div class="air"></div>
-       </div>
-
-       <div id="forecast-container">
-        <h1>5-Day Weather Forecast</h1>
-        <div id="forecast"></div>
-       </div>
+        <div class="loader"></div>
+            <div class="info">
+                <div class="content"></div>
+                <div class="temp-info"></div>
+            </div>
+           <div class="add-info">
+            <div class="general"></div>
+            <div class="air"></div>
+           </div>
     
-    </div>
+           <div id="forecast-container">
+            <h1>5-Day Weather Forecast</h1>
+            <div id="forecast"></div>
+           </div>
+        
+        
 
+    </div>
+    <canvas id="forecastChart" width="400" height="200"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

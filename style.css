@@ -55,6 +55,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 h1 {
     margin: 20px 0;
     font-size: 2.5rem;
@@ -63,12 +65,39 @@ h1 {
 }
 
 .main {
+    position: relative;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 900px;
+}
+
+/* Loader styles */
+.loader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradient-animation 2s infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .input {
@@ -102,6 +131,7 @@ h1 {
 }
 
 .info {
+    display: none;
     margin-top: 10px;
 }
 
@@ -132,13 +162,14 @@ h1 {
 }
 
 .add-info{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
 }
 
 /* Forecast Styles */
 #forecast-container {
+    display: none;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -167,4 +198,19 @@ h1 {
 
 .day-forecast p {
     margin: 2px 0;
+}
+
+/* Loading */
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
