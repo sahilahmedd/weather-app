@@ -1,52 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", serif;
-}
-
-h1{
-    text-align: center;
-    padding: 50px;
-    font-size: 50px;
-}
-
-.main{
-    border: 2px solid #8e8e8e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-    width: 100%;
-}
-
-.main .input{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.main .input input{
-    font-family: "Montserrat", serif;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.main .info{
-    border: 2px solid #B83227;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-} */
-
 body {
     font-family: "Poppins", serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #89cff0, #f6d365);
+    background: linear-gradient(135deg, #1e1e2f, #252545, #2c2c6e);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -61,7 +19,7 @@ h1 {
     margin: 20px 0;
     font-size: 2.5rem;
     text-align: center;
-    color: #444;
+    color: #ffffff;
 }
 
 .main {
@@ -200,17 +158,92 @@ h1 {
     margin: 2px 0;
 }
 
-/* Loading */
-#loading {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+
+/* Responsive design starts here */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        padding: 30px 10px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .input {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input input {
+        font-size: 1rem;
+    }
+
+    .input .button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .info .content, 
+    .info .temp-info, 
+    .info .add-info {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .day-forecast {
+        width: 120px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .day-forecast h3 {
+        font-size: 1rem;
+    }
+
+    .day-forecast p {
+        font-size: 0.8rem;
+    }
+
+    .day-forecast img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .input input {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .input .button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .info .content, 
+    .info .temp-info, 
+    .info .add-info {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .day-forecast {
+        width: 100px;
+        padding: 8px;
+    }
+
+    .day-forecast h3 {
+        font-size: 0.9rem;
+    }
+
+    .day-forecast p {
+        font-size: 0.7rem;
+    }
 }
