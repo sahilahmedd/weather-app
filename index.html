@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <p>Get real-time weather and forecasts</p>
+        </header>
+        <!-- <section class="form-section">
+            <select id="city" class="input-field">
+                <option value="">Select City</option>
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Tokyo">Tokyo</option>
+            </select> -->
+            <input type="text" id="city" class="input-field" placeholder="Enter city name">
+            <select id="api-method" class="input-field">
+                <option value="current">Current Weather</option>
+                <option value="forecast">Forecast</option>
+                <!-- <option value="history">History</option> -->
+                <!-- <option value="alerts">Alerts</option> -->
+                <option value="astronomy">Astronomy</option>
+                <!-- <option value="future">Future</option> -->
+            </select>
+            <!-- <input type="number" id="days" class="input-field" min="1" max="14" placeholder="Enter number of days (1-14)"> -->
+
+            <button id="fetch-data">Get Weather</button>
+        </section>
+        <section id="weather-result" class="result-section">
+            <!-- Data will be displayed here -->
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
