@@ -1,89 +1,170 @@
-/* Basic Reset */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", serif;
 }
+
+h1{
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+}
+
+.main{
+    border: 2px solid #8e8e8e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    width: 100%;
+}
+
+.main .input{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.main .input input{
+    font-family: "Montserrat", serif;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.main .info{
+    border: 2px solid #B83227;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+} */
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1e2a47, #3a4f7c);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-header {
-    margin-bottom: 30px;
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #89cff0, #f6d365);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #444;
 }
 
-p {
-    font-size: 1.1rem;
+.main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
 }
 
-.form-section {
+.input {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.input-field {
+.input input {
+    flex: 1;
     padding: 10px;
     font-size: 1rem;
-    margin: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
+    margin-right: 10px;
 }
 
-button {
-    padding: 10px 20px;
+.input .button {
+    padding: 10px 15px;
     font-size: 1rem;
-    background: #4CAF50;
-    color: white;
+    color: #fff;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: #45a049;
+.input .button:hover {
+    background-color: #0056b3;
 }
 
-.result-section {
-    background: #fff;
-    color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.info {
+    margin-top: 10px;
 }
 
-.result-section h2 {
-    margin-bottom: 10px;
+.content, .temp-info, .add-info {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* width: 50%; */
 }
 
-.result-section p {
+.content {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.temp-info {
+    font-size: 1rem;
+    color: #555;
+}
+
+.temp-info img{
+    width: 30px;
+
+}
+
+.add-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Forecast Styles */
+#forecast-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.day-forecast {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.day-forecast img {
+    width: 50px;
+    height: 50px;
+}
+
+.day-forecast h3 {
     margin: 5px 0;
+    font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-    .form-section {
-        flex-direction: column;
-    }
-
-    .input-field {
-        width: 80%;
-    }
+.day-forecast p {
+    margin: 2px 0;
 }
