@@ -7,7 +7,7 @@ button.addEventListener("click", async function getweather() {
     let addinfo = document.querySelector(".general")
     let airquality = document.querySelector(".air")
     let city = input.value;
-    let url = "http://api.weatherapi.com/v1/"
+    let url = "https://api.weatherapi.com/v1/"
     let key = "d3d11d2cb91c4fd39c1171442251401"
 
     // let response = await fetch(`${url}?&key=${key}&q=${city}&aqi=yes`)
